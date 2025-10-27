@@ -26,3 +26,48 @@ h1 {
     border: none;
     color: white;
 }
+
+/* Dark mode overrides for Calendar */
+body.dark-mode .calendar-container {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    box-shadow: none;
+}
+
+body.dark-mode .calendar-container h1,
+body.dark-mode h1 {
+    color: var(--text-primary);
+}
+
+body.dark-mode .fc {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+}
+
+body.dark-mode .fc-toolbar-title {
+    color: var(--text-primary);
+}
+
+body.dark-mode .fc .fc-daygrid-day,
+body.dark-mode .fc .fc-daygrid-day-frame,
+body.dark-mode .fc .fc-scrollgrid {
+    background: transparent;
+    color: var(--text-primary);
+}
+
+body.dark-mode .gcal-event {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: 1px solid var(--border-color);
+}
+
+/* Make event popovers / tooltips readable if present */
+body.dark-mode .fc-popover,
+body.dark-mode .fc-popover .fc-popover-body {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+}
+
+/* end Calendar dark-mode */

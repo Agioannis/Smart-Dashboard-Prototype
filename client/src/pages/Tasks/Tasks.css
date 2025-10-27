@@ -774,3 +774,256 @@ textarea.form-control {
         justify-content: center;
     }
 }
+
+/* Dark mode overrides for Tasks page */
+body.dark-mode .tasks-container {
+    background: var(--bg-secondary) !important;
+    color: var(--text-primary) !important;
+}
+
+body.dark-mode .page-title {
+    color: var(--text-primary) !important;
+}
+
+body.dark-mode .page-subtitle {
+    color: var(--text-secondary) !important;
+}
+
+/* Stats cards */
+body.dark-mode .stat-item {
+    background: var(--bg-primary) !important;
+    border: 1px solid var(--border-color) !important;
+    color: var(--text-primary) !important;
+    box-shadow: none !important;
+}
+
+body.dark-mode .stat-value {
+    color: var(--text-primary) !important;
+}
+
+body.dark-mode .stat-label {
+    color: var(--text-secondary) !important;
+}
+
+/* Controls */
+body.dark-mode .tasks-controls {
+    background: var(--bg-primary) !important;
+    border: 1px solid var(--border-color) !important;
+    color: var(--text-primary) !important;
+}
+
+body.dark-mode .filter-btn {
+    background: var(--bg-tertiary) !important;
+    border: 1px solid var(--border-color) !important;
+    color: var(--text-secondary) !important;
+}
+
+body.dark-mode .filter-btn:hover {
+    background: var(--bg-primary) !important;
+}
+
+body.dark-mode .filter-btn.active {
+    background: var(--primary-color) !important;
+    color: #fff !important;
+    border-color: var(--primary-color) !important;
+}
+
+/* Search / inputs */
+body.dark-mode .search-box input,
+body.dark-mode .sort-select,
+body.dark-mode .form-control,
+body.dark-mode .search-box input:focus {
+    background: var(--bg-tertiary) !important;
+    color: var(--text-primary) !important;
+    border: 1px solid var(--border-color) !important;
+    box-shadow: none !important;
+}
+
+/* Task cards */
+body.dark-mode .task-card {
+    background: var(--bg-primary) !important;
+    border: 1px solid var(--border-color) !important;
+    color: var(--text-primary) !important;
+    box-shadow: none !important;
+}
+
+body.dark-mode .task-card:hover {
+    border-color: var(--border-color) !important;
+    box-shadow: none !important;
+}
+
+body.dark-mode .task-card-title {
+    color: var(--text-primary) !important;
+}
+
+body.dark-mode .task-card-description,
+body.dark-mode .due-date,
+body.dark-mode .task-card-meta,
+body.dark-mode .task-card .priority-badge {
+    color: var(--text-secondary) !important;
+}
+
+/* Priority / status badges */
+body.dark-mode .priority-badge,
+body.dark-mode .status-badge-large,
+body.dark-mode .status-completed,
+body.dark-mode .status-progress,
+body.dark-mode .status-pending {
+    background: var(--bg-tertiary) !important;
+    color: var(--text-primary) !important;
+    border: 1px solid var(--border-color) !important;
+}
+
+body.dark-mode .status-completed {
+    background: rgba(16, 185, 129, 0.08) !important;
+    color: var(--success-color) !important;
+    border-color: rgba(16, 185, 129, 0.16) !important;
+}
+
+body.dark-mode .status-progress {
+    background: rgba(59, 130, 246, 0.08) !important;
+    color: var(--info-color) !important;
+    border-color: rgba(59, 130, 246, 0.12) !important;
+}
+
+body.dark-mode .status-pending {
+    background: rgba(148, 163, 184, 0.06) !important;
+    color: var(--text-secondary) !important;
+    border-color: rgba(148, 163, 184, 0.08) !important;
+}
+
+/* Action buttons */
+body.dark-mode .action-btn,
+body.dark-mode .edit-btn,
+body.dark-mode .delete-btn,
+body.dark-mode .modal-close,
+body.dark-mode .sort-order-btn,
+body.dark-mode .pagination-btn {
+    background: var(--bg-tertiary) !important;
+    color: var(--text-secondary) !important;
+    border: 1px solid var(--border-color) !important;
+}
+
+body.dark-mode .edit-btn {
+    background: rgba(37, 99, 235, 0.06) !important;
+    color: var(--primary-color) !important;
+}
+
+body.dark-mode .delete-btn {
+    background: rgba(220, 38, 38, 0.06) !important;
+    color: var(--danger-color) !important;
+}
+
+/* Modal */
+body.dark-mode .modal-overlay {
+    background: rgba(2, 6, 23, 0.6) !important;
+}
+
+body.dark-mode .modal-container,
+body.dark-mode .modal-small {
+    background: var(--bg-primary) !important;
+    color: var(--text-primary) !important;
+    border: 1px solid var(--border-color) !important;
+    box-shadow: none !important;
+}
+
+body.dark-mode .modal-header,
+body.dark-mode .modal-footer {
+    border-color: var(--border-color) !important;
+}
+
+body.dark-mode .modal-header h2,
+body.dark-mode .modal-close {
+    color: var(--text-primary) !important;
+}
+
+/* Empty / loading states */
+body.dark-mode .empty-state {
+    background: var(--bg-primary) !important;
+    color: var(--text-secondary) !important;
+    border: 1px solid var(--border-color) !important;
+}
+
+body.dark-mode .empty-state i,
+body.dark-mode .spinner {
+    color: var(--border-color) !important;
+}
+
+/* Pagination */
+body.dark-mode .pagination-container {
+    background: var(--bg-primary) !important;
+    border: 1px solid var(--border-color) !important;
+    color: var(--text-secondary) !important;
+}
+
+body.dark-mode .pagination-btn {
+    background: var(--bg-tertiary) !important;
+    color: var(--text-secondary) !important;
+    border: 1px solid var(--border-color) !important;
+}
+
+body.dark-mode .pagination-btn.active {
+    background: var(--primary-color) !important;
+    color: #fff !important;
+    border-color: var(--primary-color) !important;
+}
+
+/* Checkbox accent color */
+body.dark-mode .task-checkbox-large {
+    accent-color: var(--primary-color) !important;
+}
+
+/* small helpers */
+body.dark-mode .task-card.completed {
+    opacity: 0.8;
+    color: var(--text-secondary) !important;
+}
+
+body.dark-mode .delete-confirm-content i {
+    color: var(--danger-color) !important;
+}
+
+body.dark-mode .form-group label {
+    color: var(--text-secondary) !important;
+}
+
+/* Dark-mode: colored priority badges (high/medium/low) */
+body.dark-mode .priority-badge {
+    background: var(--bg-tertiary) !important;
+    color: var(--text-primary) !important;
+    border: 1px solid var(--border-color) !important;
+}
+
+/* High priority - red tint */
+body.dark-mode .priority-badge.priority-high,
+body.dark-mode .priority-badge.high {
+    background: rgba(220, 38, 38, 0.08) !important;
+    color: var(--danger-color) !important;
+    border-color: rgba(220, 38, 38, 0.18) !important;
+}
+
+/* Medium priority - amber/orange tint */
+body.dark-mode .priority-badge.priority-medium,
+body.dark-mode .priority-badge.medium {
+    background: rgba(245, 158, 11, 0.08) !important;
+    color: var(--warning-color) !important;
+    border-color: rgba(245, 158, 11, 0.16) !important;
+}
+
+/* Low priority - green tint */
+body.dark-mode .priority-badge.priority-low,
+body.dark-mode .priority-badge.low {
+    background: rgba(16, 185, 129, 0.08) !important;
+    color: var(--success-color) !important;
+    border-color: rgba(16, 185, 129, 0.16) !important;
+}
+
+/* Fallback/neutral priority */
+body.dark-mode .priority-badge.priority-none,
+body.dark-mode .priority-badge.none {
+    background: var(--bg-tertiary) !important;
+    color: var(--text-secondary) !important;
+    border-color: var(--border-color) !important;
+}
+
+/* end Tasks dark-mode overrides */

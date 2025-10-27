@@ -6,12 +6,10 @@ import Tasks from './pages/Tasks/Tasks';
 import AIInsights from './pages/AIInsights/AIInsights';
 import Expenses from './pages/Expenses/Expenses';
 import Calendar from './pages/Calendar/Calendar';
-
-
+import Settings from './pages/Settings/Settings';
+import { SettingsProvider } from './context/SettingsContext';
 
 // Placeholder pages - replace with actual later
-const Settings = () => <div className="page-placeholder"><h2>Settings</h2><p>Coming soon</p></div>;
-
 
 // Navbar component (responsive)
 const Navbar = ({ toggleSidebar, isMobile }) => {
@@ -153,22 +151,24 @@ function App() {
     };
 
     return (
-        <Router>
-            <div className="app">
-                <Navbar toggleSidebar={toggleSidebar} isMobile={isMobile} />
-                <Sidebar collapsed={sidebarCollapsed} />
-                <main className={`main-content ${sidebarCollapsed ? 'sidebar-collapsed' : ''}`}>
-                    <Routes>
-                        <Route path="/" element={<Dashboard />} />
-                        <Route path="/tasks" element={<Tasks />} />
-                        <Route path="/expenses" element={<Expenses />} />
-                        <Route path="/ai-insights" element={<AIInsights />} />
-                        <Route path="/settings" element={<Settings />} />
-                        <Route path="/calendar" element={<Calendar />} />
-                    </Routes>
-                </main>
-            </div>
-        </Router>
+        <SettingsProvider>
+            <Router>
+                <div className="app">
+                    <Navbar toggleSidebar={toggleSidebar} isMobile={isMobile} />
+                    <Sidebar collapsed={sidebarCollapsed} />
+                    <main className={`main-content ${sidebarCollapsed ? 'sidebar-collapsed' : ''}`}>
+                        <Routes>
+                            <Route path="/" element={<Dashboard />} />
+                            <Route path="/tasks" element={<Tasks />} />
+                            <Route path="/expenses" element={<Expenses />} />
+                            <Route path="/ai-insights" element={<AIInsights />} />
+                            <Route path="/settings" element={<Settings />} />
+                            <Route path="/calendar" element={<Calendar />} />
+                        </Routes>
+                    </main>
+                </div>
+            </Router>
+        </SettingsProvider>
     );
 }
 

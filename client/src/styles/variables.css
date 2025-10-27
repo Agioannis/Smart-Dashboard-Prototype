@@ -8,7 +8,7 @@
     --warning-color: #f59e0b;
     --info-color: #3b82f6;
 
-    /* Neutral Colors */
+    /* Neutral Colors (light) */
     --bg-primary: #ffffff;
     --bg-secondary: #f8fafc;
     --bg-tertiary: #f1f5f9;
@@ -56,6 +56,20 @@
     --transition-fast: 0.15s ease;
     --transition-normal: 0.3s ease;
     --transition-slow: 0.5s ease;
+}
+
+/* Dark mode overrides for the whole app */
+body.dark-mode {
+    --bg-primary: #0f172a;
+    --bg-secondary: #111827;
+    --bg-tertiary: #1f2937;
+    --text-primary: #e6eef8;
+    --text-secondary: #9aaec6;
+    --text-muted: #7b93b1;
+    --border-color: #263048;
+    --primary-color: #60a5fa;
+    background: var(--bg-secondary);
+    color: var(--text-primary);
 }
 
 /* Font Family Override */

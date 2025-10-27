@@ -59,3 +59,41 @@
     margin-top: 0;
     margin-bottom: 1rem;
 }
+
+/* Dark mode overrides for AI Insights */
+body.dark-mode .ai-insights-container {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    min-height: 100vh;
+}
+
+body.dark-mode .ai-title {
+    color: var(--text-primary);
+}
+
+body.dark-mode .ai-subtitle {
+    color: var(--text-secondary);
+}
+
+body.dark-mode .ai-error {
+    color: var(--danger-color);
+}
+
+body.dark-mode .ai-cards {
+    gap: 1.5rem;
+}
+
+body.dark-mode .ai-cards .card {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    box-shadow: none;
+}
+
+/* Ensure buttons readable (btn-primary-custom already handled in App.css) */
+body.dark-mode .btn-primary-custom {
+    background: var(--primary-color) !important;
+    color: #fff !important;
+}
+
+/* end AIInsights dark-mode */

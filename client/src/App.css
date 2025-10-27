@@ -370,6 +370,174 @@ body {
     box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
 }
 
+/* ---- app-wide dark-mode overrides ---- */
+body.dark-mode {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+}
+
+/* Top-level layout */
+body.dark-mode .navbar,
+body.dark-mode .sidebar,
+body.dark-mode .main-content {
+    background: var(--bg-primary) !important;
+    color: var(--text-primary) !important;
+    border-color: var(--border-color) !important;
+}
+
+/* Panels / cards / containers */
+body.dark-mode .panel,
+body.dark-mode .metric-card,
+body.dark-mode .card,
+body.dark-mode .settings-container,
+body.dark-mode .tasks-container,
+body.dark-mode .expenses-container,
+body.dark-mode .ai-insights-container,
+body.dark-mode .empty-state,
+body.dark-mode .modal-content,
+body.dark-mode .task-card,
+body.dark-mode .task-item {
+    background: var(--bg-primary) !important;
+    color: var(--text-primary) !important;
+    border-color: var(--border-color) !important;
+    box-shadow: none !important;
+}
+
+/* Tables and lists */
+body.dark-mode .data-table,
+body.dark-mode .expenses-table,
+body.dark-mode .data-table thead th,
+body.dark-mode .data-table tbody td,
+body.dark-mode .expenses-table th,
+body.dark-mode .expenses-table td {
+    background: transparent !important;
+    color: var(--text-secondary) !important;
+    border-color: var(--border-color) !important;
+}
+
+/* Forms / inputs / selects */
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select,
+body.dark-mode .form-control {
+    background: var(--bg-tertiary) !important;
+    color: var(--text-primary) !important;
+    border: 1px solid var(--border-color) !important;
+}
+
+/* Buttons */
+body.dark-mode .btn-primary-custom {
+    background: var(--primary-color) !important;
+    color: #fff !important;
+}
+
+body.dark-mode .btn-secondary-custom,
+body.dark-mode .btn-secondary-sm {
+    background: var(--bg-tertiary) !important;
+    color: var(--text-secondary) !important;
+    border-color: var(--border-color) !important;
+}
+
+/* Modal overlay */
+body.dark-mode .modal-overlay {
+    background: rgba(2, 6, 23, 0.6) !important;
+}
+
+/* small helpers */
+body.dark-mode .profile-readonly {
+    background: var(--bg-tertiary) !important;
+    color: var(--text-primary) !important;
+}
+
+body.dark-mode .nav-item:hover {
+    background: var(--bg-tertiary) !important;
+    color: var(--text-primary) !important;
+}
+
+/* ===== fix: ensure readable text in dark-mode for components that use hard-coded colors ===== */
+/* Append this after your existing dark-mode overrides block */
+
+body.dark-mode .page-title,
+body.dark-mode .panel-title,
+body.dark-mode .metric-value,
+body.dark-mode .task-title,
+body.dark-mode .task-meta,
+body.dark-mode .task-due,
+body.dark-mode .task-status,
+body.dark-mode .profile-name,
+body.dark-mode .profile-email,
+body.dark-mode .profile-dropdown-item,
+body.dark-mode .profile-dropdown-item i,
+body.dark-mode .notification-badge,
+body.dark-mode .pagination-info,
+body.dark-mode .metric-trend,
+body.dark-mode .metric-subtitle,
+body.dark-mode .progress-value,
+body.dark-mode .task-item,
+body.dark-mode .panel-header,
+body.dark-mode .panel-body,
+body.dark-mode .main-content {
+    color: var(--text-primary) !important;
+}
+
+/* Secondary / muted text */
+body.dark-mode .metric-label,
+body.dark-mode .header-meta,
+body.dark-mode .data-table thead th,
+body.dark-mode .metric-subtitle,
+body.dark-mode .profile-email,
+body.dark-mode .progress-label,
+body.dark-mode .pagination-info {
+    color: var(--text-secondary) !important;
+}
+
+/* Make table body readable */
+body.dark-mode .data-table tbody td,
+body.dark-mode .data-table tbody tr,
+body.dark-mode .data-table tbody tr:hover {
+    color: var(--text-primary) !important;
+}
+
+/* Make badges readable and adapt their backgrounds */
+body.dark-mode .category-badge,
+body.dark-mode .status-badge,
+body.dark-mode .status-paid,
+body.dark-mode .status-pending {
+    background: var(--bg-tertiary) !important;
+    color: var(--text-primary) !important;
+    border: 1px solid var(--border-color) !important;
+}
+
+/* Metric icon / small UI pieces */
+body.dark-mode .metric-icon,
+body.dark-mode .profile-avatar,
+body.dark-mode .profile-avatar-large {
+    background: var(--bg-tertiary) !important;
+    color: var(--text-secondary) !important;
+}
+
+/* Nav / active state */
+body.dark-mode .nav-item,
+body.dark-mode .nav-item span,
+body.dark-mode .nav-item i {
+    color: var(--text-secondary) !important;
+}
+
+body.dark-mode .nav-item.active {
+    background: rgba(96, 165, 250, 0.08) !important;
+    color: var(--primary-color) !important;
+}
+
+/* Ensure select / small controls text is readable */
+body.dark-mode select,
+body.dark-mode .sort-select-small,
+body.dark-mode .btn-secondary-sm,
+body.dark-mode .form-control {
+    color: var(--text-primary) !important;
+}
+
+/* ===== end fixes ===== */
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .navbar {

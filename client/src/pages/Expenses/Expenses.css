@@ -297,15 +297,78 @@
     border-color: #c5cbe7;
 }
 
-/* Responsive adjustments */
-@media (max-width: 600px) {
-    .modal-content {
-        width: 95vw;
-        min-width: unset;
-        padding: 1.1rem 1.1rem 1.1rem 1.1rem;
-    }
-
-    .modal-content h2 {
-        font-size: 1.1rem;
-    }
+/* Dark mode overrides for Expenses page */
+body.dark-mode .expenses-container {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
 }
+
+body.dark-mode .expenses-header h1 {
+    color: var(--text-primary);
+}
+
+body.dark-mode .expenses-controls select,
+body.dark-mode .expenses-controls input {
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+}
+
+body.dark-mode .expenses-table {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    box-shadow: none;
+}
+
+body.dark-mode .expenses-table th {
+    background: transparent;
+    color: var(--text-secondary);
+    border-bottom-color: var(--border-color);
+}
+
+body.dark-mode .expenses-table tbody tr:hover {
+    background: var(--bg-tertiary);
+}
+
+body.dark-mode .empty-state {
+    color: var(--text-secondary);
+    background: transparent;
+}
+
+body.dark-mode .modal-overlay {
+    background: rgba(2, 6, 23, 0.6);
+}
+
+body.dark-mode .modal-content {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    box-shadow: none;
+}
+
+body.dark-mode .modal-content h2 {
+    color: var(--text-primary);
+}
+
+body.dark-mode .modal-content input,
+body.dark-mode .modal-content select,
+body.dark-mode .expense-form input,
+body.dark-mode .expense-form select {
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+}
+
+body.dark-mode .btn-primary-custom {
+    background: var(--primary-color) !important;
+    color: #fff !important;
+}
+
+body.dark-mode .btn-secondary-custom {
+    background: var(--bg-tertiary) !important;
+    color: var(--text-secondary) !important;
+    border-color: var(--border-color) !important;
+}
+
+/* end Expenses dark-mode */

@@ -1,0 +1,135 @@
+:root {
+    --size-small: 14px;
+    --size-medium: 16px;
+    --size-large: 19px;
+    --settings-bg: #fff;
+    --heading: #333;
+}
+
+[data-font-size="small"] {
+    font-size: var(--size-small);
+}
+
+[data-font-size="medium"] {
+    font-size: var(--size-medium);
+}
+
+[data-font-size="large"] {
+    font-size: var(--size-large);
+}
+
+/* global dark mode colors via body class */
+body.dark-mode {
+    --settings-bg: var(--bg-primary);
+    --heading: var(--text-primary);
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+}
+
+.settings-container {
+    max-width: 500px;
+    margin: 60px auto;
+    padding: 24px 32px;
+    border-radius: 12px;
+    background: var(--settings-bg, #fff);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.11);
+}
+
+.settings-container h1 {
+    font-size: 2rem;
+    color: var(--heading, #333);
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.setting-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 0;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 1.15rem;
+    gap: 10px;
+}
+
+/* Cool switch (reuse) */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 52px;
+    height: 28px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #bdbdbd;
+    transition: .3s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 3px;
+    bottom: 3px;
+    background: #fff;
+    transition: .3s;
+    border-radius: 50%;
+}
+
+input:checked+.slider {
+    background-color: #009688;
+}
+
+input:checked+.slider:before {
+    transform: translateX(24px);
+    background: #1e88e5;
+}
+
+/* All select dropdowns styled */
+.setting-item select {
+    padding: 5px 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background: #fcfcfc;
+    min-width: 100px;
+}
+
+body.dark-mode .settings-container {
+    background: var(--settings-bg);
+}
+
+body.dark-mode .setting-item {
+    border-bottom: 1px solid #23272f;
+}
+
+body.dark-mode select {
+    background: #23272f;
+    color: #bbe1fa;
+    border: 1px solid #555;
+}
+
+.profile-readonly {
+    font-family: monospace;
+    background: #eee;
+    padding: 3px 8px;
+    border-radius: 6px;
+}
+
+body.dark-mode .profile-readonly {
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+}
