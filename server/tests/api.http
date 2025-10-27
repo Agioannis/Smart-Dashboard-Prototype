@@ -1,0 +1,83 @@
+### Health Check
+GET http://localhost:5000/api/health
+
+### Get All Tasks
+GET http://localhost:5000/api/tasks
+
+### Create New Task
+POST http://localhost:5000/api/tasks
+Content-Type: application/json
+
+{
+  "title": "Complete backend API",
+  "description": "Build RESTful API with Express and MongoDB",
+  "status": "in-progress",
+  "priority": "high",
+  "dueDate": "2025-10-26"
+}
+
+### Create Another Task
+POST http://localhost:5000/api/tasks
+Content-Type: application/json
+
+{
+  "title": "Test API endpoints",
+  "description": "Verify all CRUD operations work correctly",
+  "status": "pending",
+  "priority": "medium"
+}
+
+### Update Task (Replace {id} with actual task ID)
+PUT http://localhost:5000/api/tasks/68fcafb8e145d69e63d02b2d
+Content-Type: application/json
+
+{
+  "status": "completed",
+  "completed": true
+}
+
+### Delete Task (Replace {id} with actual task ID)
+DELETE http://localhost:5000/api/tasks/68fcafb8e145d69e63d02b2d
+
+### Get All Expenses
+GET http://localhost:5000/api/expenses
+
+### Create New Expense
+POST http://localhost:5000/api/expenses
+Content-Type: application/json
+
+{
+  "description": "Cloud hosting subscription",
+  "amount": 149.00,
+  "category": "Software",
+  "date": "2025-10-24",
+  "paymentMethod": "Credit Card",
+  "status": "Paid"
+}
+
+### Create Another Expense
+POST http://localhost:5000/api/expenses
+Content-Type: application/json
+
+{
+  "description": "Office supplies",
+  "amount": 327.50,
+  "category": "Office",
+  "paymentMethod": "Debit Card",
+  "status": "Paid"
+}
+
+### Get Expense Statistics
+GET http://localhost:5000/api/expenses/stats
+
+### Update Expense (Replace {id} with actual expense ID)
+PUT http://localhost:5000/api/expenses/68fcaff6e145d69e63d02b37
+Content-Type: application/json
+
+{
+  "amount": 175.00,
+  "notes": "Updated amount after review"
+}
+
+### Delete Expense (Replace {id} with actual expense ID)
+DELETE http://localhost:5000/api/expenses/68fcaff6e145d69e63d02b37
