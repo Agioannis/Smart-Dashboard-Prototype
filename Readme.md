@@ -9,6 +9,7 @@ Smart Dashboard is a modern and intuitive dashboard application designed to prov
 - **Data Visualization**: Interactive charts, graphs, and tables for better insights.
 - **Responsive Design**: Optimized for both desktop and mobile devices.
 - **Integration Support**: Connect with popular APIs and data sources.
+- **AI Integration**: Leverage AI-powered insights and recommendations to make data-driven decisions.
 
 ## Installation
 
@@ -34,6 +35,7 @@ Smart Dashboard is a modern and intuitive dashboard application designed to prov
 1. Open your browser and navigate to `http://localhost:3000`.
 2. Customize your dashboard by adding or removing widgets.
 3. Connect your data sources and start visualizing your data.
+4. Utilize AI features for predictive analytics and automated insights.
 
 ## Contributing
 
